@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تبلیغ آکادمی نائی</title>
+    <title>    امیرحسین نائی</title>
     <style>
         * {
             margin: 0;
@@ -17,99 +17,104 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            background: linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         .container {
             width: 1600px;
-            height: 900px;
-             background: linear-gradient(135deg, #c1f0ff89 0%, #f6ffcf79 100%); 
-            border-radius: 15px;
-            border: 1px solid #2d4059;
+            height: 1300px;
+            background: linear-gradient(135deg, rgba(193, 240, 255, 0.9) 0%, rgba(246, 255, 207, 0.9) 100%);
+            border-radius: 20px;
+            border: 2px solid #2d4059;
             position: relative;
-            overflow: hidden;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
         
         .main-image {
-            width: 30%;
+            width: 26%;
             height: auto;
             display: block;
-            margin: 40px auto 0;
-            margin-top: 128px;
+            margin: 350px auto 0;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
             filter: brightness(1.05) contrast(1.1) saturate(1.1);
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            z-index: 5;
         }
         
-        .top-glass {
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
+        .glass-panel {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 20px;
-            padding: 20px 30px;
-            text-align: center;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             z-index: 10;
+        }
+        
+        .top-glass {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 650px;
+            padding: 25px 35px;
+            text-align: center;
         }
 
         .bottom-glass {
             position: absolute;
-            bottom: 40px;
+            bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
-            width: 800px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 20px;
-            padding: 25px 35px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-            z-index: 10;
+            width: 850px;
+            padding: 30px 40px;
         }
         
         .name {
-            font-size: 36px;
-            font-weight: bold;
+            font-size: 42px;
+            font-weight: 900;
             color: #1a3a5f;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            letter-spacing: 1px;
         }
         
         .title {
-            font-size: 26px;
-            font-weight: 600;
+            font-size: 28px;
+            font-weight: 700;
             color: #2d4059;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .gold-text {
-            font-size: 42px;
+            font-size: 46px;
             font-weight: 900;
             color: #d4af37;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
             display: block;
-            margin: 5px 0;
+            margin: 10px 0;
+            letter-spacing: 2px;
         }
         
         .info-text {
             color: #2d4059;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 8px;
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 10px;
             text-align: center;
+            font-weight: 500;
         }
         
         .section-title {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 26px;
+            font-weight: 800;
             color: #1a3a5f;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
         
         .money-icon {
@@ -118,47 +123,85 @@
             opacity: 0.8;
             z-index: 2;
             filter: drop-shadow(0 5px 10px rgba(212, 175, 55, 0.3));
-            animation: spin 20s linear infinite;
+            animation: spin 25s linear infinite;
         }
         
-        .money-1 { top: 15%; left: 8%; font-size: 60px; }
-        .money-2 { top: 25%; right: 10%; font-size: 45px; }
-        .money-3 { top: 60%; left: 5%; font-size: 55px; }
-        .money-4 { top: 70%; right: 8%; font-size: 40px; }
-        .money-5 { top: 40%; left: 12%; font-size: 65px; animation-delay: -5s; }
-        .money-6 { top: 50%; right: 12%; font-size: 45px; animation-delay: -10s; }
-        .money-7 { top: 20%; left: 15%; font-size: 35px; animation-delay: -15s; }
-        .money-8 { top: 65%; right: 5%; font-size: 50px; animation-delay: -7s; }
+        .money-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .money-1 { top: 12%; left: 8%; font-size: 65px; }
+        .money-2 { top: 22%; right: 10%; font-size: 50px; }
+        .money-3 { top: 65%; left: 5%; font-size: 60px; }
+        .money-4 { top: 75%; right: 8%; font-size: 45px; }
+        .money-5 { top: 45%; left: 12%; font-size: 70px; animation-delay: -3s; }
+        .money-6 { top: 55%; right: 12%; font-size: 50px; animation-delay: -8s; }
+        .money-7 { top: 18%; left: 15%; font-size: 40px; animation-delay: -12s; }
+        .money-8 { top: 70%; right: 5%; font-size: 55px; animation-delay: -5s; }
         
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
         
-        .money-float {
-            animation: float 4s ease-in-out infinite;
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
         }
         
         .float-1 { animation-delay: 0s; }
-        .float-2 { animation-delay: 0.5s; }
-        .float-3 { animation-delay: 1s; }
-        .float-4 { animation-delay: 1.5s; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+        .float-2 { animation-delay: 0.7s; }
+        .float-3 { animation-delay: 1.4s; }
+        .float-4 { animation-delay: 2.1s; }
         
         .gold-line {
-            height: 2px;
+            height: 3px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 10px auto;
-            width: 80%;
+            margin: 15px auto;
+            width: 85%;
+            border-radius: 3px;
+        }
+        
+        .money-icons-row {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .money-icons-row span {
+            font-size: 34px;
+            margin: 0 12px;
+            opacity: 0.9;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        
+        .money-icons-row span:nth-child(1) { animation-delay: 0s; }
+        .money-icons-row span:nth-child(2) { animation-delay: 0.2s; }
+        .money-icons-row span:nth-child(3) { animation-delay: 0.4s; }
+        .money-icons-row span:nth-child(4) { animation-delay: 0.6s; }
+        .money-icons-row span:nth-child(5) { animation-delay: 0.8s; }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 2px, transparent 2px);
+            background-size: 100px 100px;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="bg-pattern"></div>
+        
         <div class="money-icon money-1 money-float float-1">💰</div>
         <div class="money-icon money-2 money-float float-2">💵</div>
         <div class="money-icon money-3 money-float float-3">💴</div>
@@ -168,15 +211,15 @@
         <div class="money-icon money-7">💸</div>
         <div class="money-icon money-8">🪙</div>
         
-        <img src="amirhossein-naei.png" alt="امیرحسین نائی" class="main-image">
+        <img src="amirhossein-naei.png" alt="امیرحسین نائی" class="main-image"><br><br><br><br>
         
-        <div class="top-glass">
+        <div class="top-glass glass-panel">
             <div class="name">امیرحسین نائی</div>
             <div class="title">برترین برنامه‌نویس ایران</div>
-            <span class="gold-text">ثروتمند‌ترین</span>
+            <span class="gold-text">ثروتمند‌ترین مدرس برنامه‌نویسی</span>
         </div>
         
-        <div class="bottom-glass">
+        <div class="bottom-glass glass-panel">
             <div class="section-title">موسس آکادمی برنامه‌نویسی نائی (حاج امیرحسین ثروتمندیان)</div>
             
             <div class="gold-line"></div>
@@ -189,12 +232,12 @@
             
             <div class="gold-line"></div>
             
-            <div style="text-align: center; margin-top: 15px;">
-                <span style="font-size: 30px; margin: 0 10px; opacity: 0.8;">💰</span>
-                <span style="font-size: 30px; margin: 0 10px; opacity: 0.8;">💵</span>
-                <span style="font-size: 30px; margin: 0 10px; opacity: 0.8;">💎</span>
-                <span style="font-size: 30px; margin: 0 10px; opacity: 0.8;">💸</span>
-                <span style="font-size: 30px; margin: 0 10px; opacity: 0.8;">🪙</span>
+            <div class="money-icons-row">
+                <span>💰</span>
+                <span>💵</span>
+                <span>💎</span>
+                <span>💸</span>
+                <span>🪙</span>
             </div>
         </div>
     </div>
